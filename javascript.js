@@ -9,14 +9,32 @@ function getComputerChoice() {
   };
 };
 
-console.log(getComputerChoice());
-
 function getHumanChoice() {
   return prompt ('Make your choice: Rock, Paper, or Scissors?');
 };
 
-console.log(getHumanChoice());
-
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+  const human = humanChoice.toLowerCase();
+  const computer = computerChoice.toLowerCase();
+  if (human === computer) {
+    console.log(`It is a tie! The score is stil ${humanScore} - ${computerScore}`);
+  } else if (
+    (human === 'rock' && computer === 'scissors') ||
+    (human === 'paper' && computer === 'rock') ||
+    human === 'scissors' && computer === 'paper') {
+    humanScore++;
+    console.log (`You won this round! The score is now ${humanScore} - ${computerScore}`);
+  } else {
+    computerScore++;
+    console.log(`You lost this round! The score is now ${humanScore} - ${computerScore}`);
+  }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
 
