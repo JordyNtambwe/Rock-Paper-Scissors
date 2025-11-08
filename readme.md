@@ -1,0 +1,3 @@
+# Rock Paper Scissors
+
+This is the third project from The Odin Project, but this time, this project is being built compldtely form the ground up. This project consists of creating the game "Rock, Paper, Scissors" that can be played entirely in the browser's console. In addition, functions are created so then "rock, paper, or scissors" returns in the console from the browser as well as the user and keeps track of the players score to determine the winner at the end of 5 rounds.
