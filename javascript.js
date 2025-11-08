@@ -6,6 +6,14 @@ function getComputerChoice() {
     return 'paper';
   } else {
     return 'scissors';
-  }
-}
+  };
+};
+
 console.log(getComputerChoice());
+
+function getHumanChoice() {
+  return prompt ('Make your choice: Rock, Paper, or Scissors?');
+};
+
+console.log(getHumanChoice());
+
